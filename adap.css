@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* Простой «резиновый» носитель
+   Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE6 не поддерживает атрибут max-width, поэтому по умолчанию используется ширина 100 % */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Свойства Dreamweaver Fluid Grid
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote) 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	и системой Golden Grid Джони Корпи (Joni Korpi)
+	http://goldengridsystem.com/
+*/
+
+/* Мобильный макет: 480 пикс. и меньше. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 89.28%;
+	padding-left: 1.86%;
+	padding-right: 1.86%;
+	height: 90%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#line {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#space2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#space1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Макет для планшета: 481–768 пикс. Наследует стили от мобильного макета. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 94.575%;
+	padding-left: 1.2125%;
+	padding-right: 1.2125%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#line {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#space2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#space1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Макет для настольного компьютера: 769–1232 пикс. (максимум). Наследует стили от мобильного макета и макета для планшета. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 93.1%;
+	max-width: 1232px;
+	padding-left: 0.95%;
+	padding-right: 0.95%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#line {
+	clear: both;
+	float: left;
+	margin-left: 1.2em;
+	width: 97%;
+	display: block;
+}
+#space2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#space1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: inline;
+	visibility: hidden;
+}
+}.offline_stat {
+	color: #FF6384;
+}
+.footer {
+	display: block;
+	width: 100%;
+	position: fixed;
+	left: 2em;
+	bottom: 2em;
+
+}
+.top_stat_table {
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0.5em;
+	clear: both;
+	float: none;
+}
+time_upt_tint {
+	color: #999;
+}
+.time_upt_tint {
+	color: #FFF;
+	-webkit-transition: all;
+	-moz-transition: all;
+	-ms-transition: all;
+	-o-transition: all;
+	transition: all;
+}
+.log_im {
+	display: block;
+	width: 46%;
+	margin-top: 10%;
+	margin-left: 28%;
+}
+.sys_status {
+	margin-top: 2em;
+	margin-right: 1em;
+	margin-left: 4em;
+	display: inline-block;
+	width: 25%;
+	border: 1.5px solid #000;
+}
+.log_form {
+	display: block;
+	width: 20%;
+	left: 43%;
+	right: 37%;
+	position: absolute;
+}
+.red_but {
+	cursor: pointer;
+}
+.out_but {
+	cursor: pointer;
+}
+.motion_log {
+	font-size: 10px;
+	display: block;
+	overflow: auto;
+	width: 100%;
+}
+.line {
+	width: 97%;
+	background-image: url(img/line.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	clear: both;
+}
+.canvas_stat {
+	display: inline-block;
+	height: 15%;
+	width: 40%;
+	padding-left: 5em;
+}
+.status_panel {
+	font-size: 2em;
+}
+content_text {
+	font-size: 12em;
+}
+div {
+	color: #FF0;
+}
+div {
+	color: #FFF;
+}
+.passive_stat {
+	color: #FF0;
+}
+.active_stat {
+	color: #5ED27D;
+}

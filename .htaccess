@@ -1,0 +1,37 @@
+Options All -ExecCGI -Indexes
+DirectoryIndex login.html
+ServerSignature Off
+AddType application/x-httpd-php .html
+AddHandler cgi-script .pl .py .jsp .asp .htm .shtml .sh .cgi
+AddType application/x-javascript .js
+AddType text/css .css
+AddType text/xml .xml
+AddType application/octet-stream .doc .mov .avi .pdf .xls
+
+ # Запускаем движок замены
+
+RewriteEngine on
+
+ # Если запрашиваемый объект не папка
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+ # если запрашиваемый объект с дописанным расширением html - файл
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+ # делаем замену с дописыванием .html
+
+RewriteRule ^(.*)$ $1.html
+
+ # если запрашиваемый объект с дописанным расширением php - файл                                                                                                                                           
+                                                                                                                                                                                                            
+RewriteCond %{REQUEST_FILENAME}\.php -f                                                                                                                                                                    
+                                                                                                                                                                                                            
+ # делаем замену с дописыванием .php                                                                                                                                                                      
+                                                                                                                                                                                                            
+RewriteRule ^(.*)$ $1.php  
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>

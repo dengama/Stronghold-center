@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta name="theme-color" content="#191919">
+	<meta charset="utf-8">
+	<title>Server statistics</title>
+	<link rel="icon" href="img/icon.png" type="image/png">
+	<link href="mobile.css" rel="stylesheet">
+	<script src="script.js"></script>
+	<script src="jquery.js"></script>
+	<script>			
+		$(document).ready(function() {
+		var reload = setInterval(
+		function(){
+			//загружаем данные из файла и отображаем в элементе id="progress"
+			$('#uptime').load('script.php #s_time');
+			$('#on_status').load('script.php #status');
+			$('#sensors').load('script.php #sensors');
+			$('#mem_usage').load('script.php #mem');
+			$('#net_usage').load('script.php #net');
+			$('#cpu_usage').load('script.php #cpu');
+		}, 1000); //каждую секунду
+		}); 
+	</script>
+ </head>
+ <header>
+	<div class="current_page">
+		<p>SERVER STATISTICS</p>
+ </header>
+ <body>
+ <div class="s_stat">
+ <table>
+	<td style="padding: 0.01em 1em 0.01em 1em;" bgcolor="#141414">
+	<div class="s_name">
+		<?php
+			echo "<pre>";
+			passthru("uname -a");
+			echo "</pre>";
+		?>
+	</div>
+	</td>
+</table>
+ <table>
+	<td style="padding: 0.01em 1em 0.01em 1em;" bgcolor="#141414">
+	<div id="sensors" class="temp_stat"></div>
+	</td>
+</table>
+ <table>
+	<td style="padding: 0.01em 1em 0.01em 1em;" bgcolor="#141414">
+	<div id="mem_usage" class="mem_usage"></div>
+	</td>
+</table>
+ <table>
+	<td style="padding: 0.01em 1em 0.01em 1em;" bgcolor="#141414">
+	<div id="net_usage" class="net_usage"></div>
+	</td>
+</table>
+ <table>
+	<td style="padding: 0.01em 1em 0.01em 1em;" bgcolor="#141414">
+	<div id="cpu_usage" class="cpu_usage"></div>
+	</td>
+</table>
+</div>
+ </body>
+  <footer>
+
+  </footer>
+</html>

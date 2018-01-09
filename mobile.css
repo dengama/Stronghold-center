@@ -1,0 +1,270 @@
+@import url("adaptive.css");		/* подключение файла с адаптивными стилями */
+@import url("anim.css");		/*подключение файла с анимациями*/
+header {
+font-size: 2.4em;
+font-family: Calibri;
+padding: 1% 1% 1% 1%;
+color: #878787;
+}
+body {
+background: url(img/bg_grad.png) repeat-x #191919;		/* заливка бэкграунда градиентом */
+color: white;
+font-size: 2.0em;
+font-family: Calibri;
+padding: 2% 2% 2% 2%;
+line-height: 1.5em;
+}
+footer {
+padding-top: 13em;
+opacity: 0.05;
+}
+a {
+text-decoration: none;			/*форматирование ссылок*/
+color: #ffffff;
+/*text-shadow: 0 0 2px black;*/
+}
+.ex_but {		/* кнопка выхода на инфо странице */
+display: block;
+position: absolute;
+opacity: 0.7;
+top: 965px;
+left: 845px;
+}
+.in_but {		/* кнопка входа на логин странице */
+display: block;
+position: absolute;
+opacity: 0.7;
+top: 595px;
+left: 825px;
+}
+.no_att_check {		
+display: block;
+position: absolute;
+opacity: 0.7;
+top: 545px;
+left: 775px;
+}
+.log_field {		/* поле входа */
+display: block;
+position: absolute;
+opacity: 0.7;
+top: 420px;
+left: 813px;
+text-shadow: 0 0 3px black;
+}
+.pass_field {	/* 	поле пароля */
+display: block;
+position: absolute;
+opacity: 0.7;
+top: 490px;
+left: 813px;
+text-shadow: 0 0 3px black;
+}
+.current_page {			/* блок отображения текущей страницы */
+
+}
+.but_cover {		/* фон кнопки */
+display: block;
+position: absolute;
+opacity: 0.1;
+animation-name: fadeIn_but;
+animation-duration: 0.5s;
+}
+.info_title {		/* текст кнопки  */
+display: block;
+text-align: center;
+position: absolute;
+left: 819px;
+top: 450px;
+}
+.a_top_but {		/* все кнопки хидера */
+
+}
+.map {		/* кнопка карты */
+position: absolute;
+top: 10.5em;
+font-size: 2em;
+left: 43%;
+animation-name: fadeIn;
+animation-duration: 1s;
+}
+.cam {		/* кнопка камер */
+position: absolute;
+top: 13.5em;
+font-size: 2em;
+left: 36%;
+animation-name: fadeIn;
+animation-duration: 2s;
+}
+.control {			/* кнопка третьей секции */
+position: absolute;
+text-align: center;
+top: 16.6em;
+font-size: 2em;
+left: 36%;
+animation-name: fadeIn;
+animation-duration: 3s;
+}
+.stat {		/* кнопка статистики */
+position: absolute;
+text-align: center;
+top: 19.7em;
+font-size: 2em;
+left: 21%;
+animation-name: fadeIn;
+animation-duration: 4s;
+}
+.headline_top {			/* верхняя линия хидера */
+display: block;
+position: absolute;
+margin: 0;
+top:79px;
+}
+.headline_bot {			/* нижняя линия хидера */
+display: block;
+position: absolute;
+margin: 0;
+top: 135px;
+}
+.login_rect {			/* овал логина */
+display: block;
+position: absolute;
+top: 440px;
+left: 753px;
+width: 360px;
+height: 60px;
+}
+.password_rect {		/* овал пароля */
+display: block;
+position: absolute;
+top: 510px;
+left: 753px;	
+}
+.logo_text_index {			/* текст на странице входа*/
+display: block;
+position: absolute;
+top: 350px;
+left: 817px;
+}
+.cam_tab {			/* таблица камер */
+	position: absolute;
+	display: block;
+	top: 23em;
+	width: 30em;
+	border: collapse;
+	bordercolor: black
+}
+ .cam1	{
+	 position: absolute;
+	 top: 6.1em;
+	 left: 1.2em;
+ }
+ .cam1_t	{
+	 opacity: 0.05;
+ }
+ .cam2	{
+	 position: absolute;
+	 top: 6.1em;
+	 left: 9.5em;
+ }
+ .cam2_t	{
+	 opacity: 0.05;
+ }
+ .cam3	{
+	 position: absolute;
+	top: 6.1em;
+	left: 17.5em;
+ }
+ .cam3_t	{
+	 opacity: 0.05;
+ }
+ .cam4	{
+	 position: absolute;
+	 top: 6.1em;
+	 left: 25em;
+ }
+ .cam4_t	{
+	 opacity: 0.05;
+ }
+.map_pic {					/*картинка карты */
+position: absolute;
+padding: 2px 2px 2px 2px;
+display: block;
+left: 0.5em;
+top: 21em;
+}
+.cam_files_all {
+position: absolute;
+display: block;
+left:1465px;
+top:235px;
+font-size: 24px;
+text-shadow: 0 0 2px black;
+}
+.cam_files_tab {
+position: absolute;
+display: block;
+overflow: auto;
+font-size: 23px;
+a (text-decoration: none);
+table-layout: fixed;
+border-collapse: collapse;
+width: 345px;
+height: 550px;
+}
+.uptime {			/* скрипт аптайма */
+position: absolute;
+top: 8.5em;
+left: 1.2em;
+animation-name: fadeIn;
+animation-duration: 7s;
+}
+.date_gen {			/* скрипт даты */
+position: absolute;
+top: 10em;
+left: 1.2em;
+animation-name: fadeIn;
+animation-duration: 3s;
+}
+.on_status {			/* скрипт пинга */
+position: absolute;
+top: 7em;
+left: 1.2em;
+animation-name: fadeIn;
+animation-duration: 7s;
+}
+.crit_alarm	{
+display:block;
+position: absolute;
+top: 10em;
+left: 1.2em;
+}
+.free_space {		/*блок показывающий свободное место, страница камер*/
+display: block;
+position: absolute;
+font-size: 24px;
+text-transform: uppercase;
+left: 25px;
+top: 235px;
+text-shadow: 0 0 2px black;
+}
+.motion_l {			/*лог motion, страница камер*/
+display: block;
+position: absolute;
+font-size: 7px;
+text-transform: uppercase;
+left: 25px;
+top: 345px;
+text-shadow: 0 0 1px black;
+}
+table {
+	position: inherit;
+	display: block;
+    width: 97%; /* Ширина таблицы */
+    border-spacing: 0.4em; /* Расстояние между ячейками */
+	overflow: auto;
+	/*border: 1px solid grey;*/
+   }
+/*td, th {
+    padding: 0.01em 1em 0.01em 1em;	/* Поля вокруг текста */
+}*/

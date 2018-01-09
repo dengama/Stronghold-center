@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta name="theme-color" content="#191919">
+	<meta charset="utf-8">
+	<title>Welcome page</title>
+	<link rel="icon" href="img/icon2.png" type="image/png">
+	<link href="mobile.css" rel="stylesheet">
+	<script src="script.js"></script>	
+	<script src="jquery.js"></script>
+	<script>			
+		$(document).ready(function() {
+		var reload = setInterval(
+		function(){
+			//загружаем данные из файла и отображаем в элементе id="progress"
+			$('#uptime').load('script.php #s_time');
+			$('#on_status').load('script.php #status');
+		}, 1000); //каждую секунду
+		}); 
+	</script>
+ </head>
+ <header>
+	<div class="current_page">
+		<p>MAIN PAGE</p>
+	</div>
+ </header>
+ <body>
+	<div id="uptime" class="uptime"></div>
+	<div class="date_gen">
+		<span id="doc_time">
+			date
+		</span>
+		<script type="text/javascript">
+			clock();
+		</script>
+	</div>
+	<div id="on_status" class="on_status"></div>
+	<!--<p class="crit_alarm">Critical alarms: <span style="color: red">disabled</span></p>-->
+	<p class="map">MAP</p>
+	<p class="cam">CAMERAS</p>
+	<p class="control">CONTROL</p>
+	<p class="stat">SERVER STATISTICS</p>
+</body>
+ <footer>
+ 		<a href="m.map"><img src="img/but_tint.png" width="100%" style="animation-name: fadeIn; animation-duration: 1s;"></a>
+		<a href="m.cam"><img src="img/but_tint.png" width="100%" style="animation-name: fadeIn; animation-duration: 2s;"></a>
+		<a href="control"><img src="img/but_tint.png" width="100%" style="animation-name: fadeIn; animation-duration: 3s;"></a>
+		<a href="m.statistics"><img src="img/but_tint.png" width="100%" style="animation-name: fadeIn; animation-duration: 4s;"></a>
+ </footer>
+</html>
