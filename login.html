@@ -5,10 +5,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="theme-color" content="#191919">
-	<link rel="icon" href="img/icon2.png" type="image/png">
+	<link rel="icon" href="img/favicons/favicon.png" type="image/png">
 		<title>Login</title>
-	<link href="adap.css" rel="stylesheet" type="text/css" />
-	<link href="boilerplate.css" rel="stylesheet" type="text/css" />
+	<link href="login.css" rel="stylesheet" type="text/css" />
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<style type="text/css">
 		body,td,th {
@@ -36,6 +35,10 @@
 		  }
 		}
 
+		/*
+		рекапчу можно обойти с правильным паролем
+		*/
+
 		//~ Проверка reCaptcha
 		if (isset($_POST['g-recaptcha-response'])) {
 			$url_to_google_api = "https://www.google.com/recaptcha/api/siteverify";
@@ -52,10 +55,11 @@
 
 		  $r.='
 		  <form action="" method="post">
+			<br />
 			LOGIN<br /><input type="text" name="login" value="'.@$_POST['login'].'" /><br />
 			PASSWORD<br /><input type="password" name="passwd" id="" /><br /><br />
 			<input type="submit" value="ENTER" name="send" />
-			<br /><br /><br />
+			<br /><br />
 			<div class="g-recaptcha" data-size="compact" data-theme="dark" data-sitekey="6LddgD8UAAAAAHojWcoH_AfA2Ph7hZ2ZssUzwKqi"></div>
 		  </form>
 		  ';

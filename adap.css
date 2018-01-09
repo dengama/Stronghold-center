@@ -1,10 +1,76 @@
 @charset "utf-8";
+/* =============================================================================
+   определения отображения HTML5
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Ссылки
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Улучшение читаемости при получении фокуса и наведении указателя во всех браузерах: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+/* =============================================================================
+   Встроенное содержимое
+   ========================================================================== */
+
+/*
+ * 1. Улучшение качества изображения при масштабировании в IE7: h5bp.com/d
+ * 2. Устранение разрыва между изображениями и границами в контейнерах изображений: h5bp.com/e
+ */
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* =============================================================================
+   База
+   ========================================================================== */
+
+/*
+ * 1. Исправление изменения размера текста в IE6/7 при установке размера шрифта тела в единицах em
+ * 2. Принудительное применение вертикальной строки прокрутки в браузерах, отличных от IE
+ * 3. Предотвращение изменение размера текста iOS при изменении ориентации устройства без отключения пользовательского масштаба: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow: auto; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.231;
+}
+
+body, button, input, select, textarea {
+	font-family: sans-serif;
+	color: #222;
+	clear: both;
+	float: none;
+}
+
 /* Простой «резиновый» носитель
    Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
-   http://www.alistapart.com/articles/fluid-images/ 
+   http://www.alistapart.com/articles/fluid-images/
 */
 img, object, embed, video {
 	max-width: 100%;
+}
+div {
+	color: #FF0;
+}
+div {
+	color: #FFF;
 }
 /* IE6 не поддерживает атрибут max-width, поэтому по умолчанию используется ширина 100 % */
 .ie6 img {
@@ -18,10 +84,10 @@ img, object, embed, video {
 	dw-num-cols-tablet:		8;
 	dw-num-cols-desktop:	10;
 	dw-gutter-percentage:	25;
-	
-	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote) 
+
+	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote)
 	http://www.alistapart.com/articles/responsive-web-design
-	
+
 	и системой Golden Grid Джони Корпи (Joni Korpi)
 	http://goldengridsystem.com/
 */
@@ -105,7 +171,7 @@ img, object, embed, video {
 
 /* Макет для настольного компьютера: 769–1232 пикс. (максимум). Наследует стили от мобильного макета и макета для планшета. */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1920px) {
 .gridContainer {
 	width: 93.1%;
 	max-width: 1232px;
@@ -141,6 +207,20 @@ img, object, embed, video {
 	display: inline;
 	visibility: hidden;
 }
+time_upt_tint {
+	color: #999;
+}
+content_text {
+	font-size: 12em;
+}
+
+/*	id	*/
+
+/*	class	*/
+
+.g-recaptcha {
+
+}
 }.offline_stat {
 	color: #FF6384;
 }
@@ -150,7 +230,6 @@ img, object, embed, video {
 	position: fixed;
 	left: 2em;
 	bottom: 2em;
-
 }
 .top_stat_table {
 	text-align: center;
@@ -158,9 +237,6 @@ img, object, embed, video {
 	margin-bottom: 0.5em;
 	clear: both;
 	float: none;
-}
-time_upt_tint {
-	color: #999;
 }
 .time_upt_tint {
 	color: #FFF;
@@ -170,12 +246,6 @@ time_upt_tint {
 	-o-transition: all;
 	transition: all;
 }
-.log_im {
-	display: block;
-	width: 46%;
-	margin-top: 10%;
-	margin-left: 28%;
-}
 .sys_status {
 	margin-top: 2em;
 	margin-right: 1em;
@@ -183,13 +253,6 @@ time_upt_tint {
 	display: inline-block;
 	width: 25%;
 	border: 1.5px solid #000;
-}
-.log_form {
-	display: block;
-	width: 20%;
-	left: 43%;
-	right: 37%;
-	position: absolute;
 }
 .red_but {
 	cursor: pointer;
@@ -218,15 +281,6 @@ time_upt_tint {
 }
 .status_panel {
 	font-size: 2em;
-}
-content_text {
-	font-size: 12em;
-}
-div {
-	color: #FF0;
-}
-div {
-	color: #FFF;
 }
 .passive_stat {
 	color: #FF0;
