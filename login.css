@@ -1,7 +1,67 @@
 @charset "utf-8";
+/* =============================================================================
+   определения отображения HTML5
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Ссылки
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Улучшение читаемости при получении фокуса и наведении указателя во всех браузерах: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+/* =============================================================================
+   Встроенное содержимое
+   ========================================================================== */
+
+/*
+ * 1. Улучшение качества изображения при масштабировании в IE7: h5bp.com/d
+ * 2. Устранение разрыва между изображениями и границами в контейнерах изображений: h5bp.com/e
+ */
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* =============================================================================
+   База
+   ========================================================================== */
+
+/*
+ * 1. Исправление изменения размера текста в IE6/7 при установке размера шрифта тела в единицах em
+ * 2. Принудительное применение вертикальной строки прокрутки в браузерах, отличных от IE
+ * 3. Предотвращение изменение размера текста iOS при изменении ориентации устройства без отключения пользовательского масштаба: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow: auto; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.231;
+}
+
+body, button, input, select, textarea {
+	font-family: sans-serif;
+	color: #222;
+	clear: both;
+	float: none;
+}
+
 /* Простой «резиновый» носитель
    Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
-   http://www.alistapart.com/articles/fluid-images/ 
+   http://www.alistapart.com/articles/fluid-images/
 */
 img, object, embed, video {
 	max-width: 100%;
@@ -18,10 +78,10 @@ img, object, embed, video {
 	dw-num-cols-tablet:		8;
 	dw-num-cols-desktop:	10;
 	dw-gutter-percentage:	25;
-	
-	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote) 
+
+	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote)
 	http://www.alistapart.com/articles/responsive-web-design
-	
+
 	и системой Golden Grid Джони Корпи (Joni Korpi)
 	http://goldengridsystem.com/
 */
@@ -98,4 +158,26 @@ img, object, embed, video {
 	width: 100%;
 	display: block;
 }
+}
+
+/*	id	*/
+
+#login_image {
+	width: 35%;
+}
+
+/*	class	*/
+
+.log_form {
+	display: block;
+	width: 20%;
+	left: 43%;
+	right: 37%;
+	position: absolute;
+}
+.log_im {
+	display: block;
+	width: 46%;
+	margin-top: 10%;
+	margin-left: 28%;
 }

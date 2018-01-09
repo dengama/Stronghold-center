@@ -24,9 +24,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#191919">
 	<meta name="msapplication-config" content="browserconfig.xml">
-	<link rel="icon" href="img/icon2.png" type="image/png">
+	<link rel="icon" href="img/favicons/favicon.png" type="image/png">
 		<title>House control</title>
-	<link href="boilerplate.css" rel="stylesheet" type="text/css">
 	<link href="adap.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 		body {
@@ -165,7 +164,7 @@
 				</tr>
 			</table>
 		</div>-->
-			
+
 			<table border=0 align="center" bordercolor=black solid black>
 			  <tr>
 				<td width="400" bgcolor="black">
@@ -456,7 +455,7 @@
 		</div>
 		<div class="TabbedPanelsContent">
 		CONTROL PANEL SETTINGS
-		
+
 		</div>
 		<div class="TabbedPanelsContent">
 			Motion Log:
@@ -477,7 +476,7 @@
 	</div>
 		<script type="text/javascript">
 				var TabbedPanels1 = new Spry.Widget.TabbedPanels("TopButt");
-				
+
 				$(document).ready(function() {
 				var reload = setTimeout(
 				function ajax(){
@@ -487,10 +486,10 @@
 				$('#s_off').load('/backend/script.php #serv_off');
 				$('#mot_log').load('/backend/script.php #mot_l');
 				setTimeout(ajax, 10000);
-				}, 
+				},
 				350);//каждые 10 секунд
-				}); 
-				
+				});
+
 				$(window).on('load', function () {
 					var $preloader = $('#page-preloader'),
 						$spinner   = $preloader.find('.spinner');
