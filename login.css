@@ -59,6 +59,40 @@ body, button, input, select, textarea {
 	float: none;
 }
 
+input.fields {
+	border-radius: 3px;
+}
+input.log_but {
+	width: 7em;
+	height: 2em;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  outline: none;
+  border: 1px solid rgba(70,70,70);
+  border-radius: 3px;
+  background: rgb(245,245,245) linear-gradient(#f7f7f7, #f7f7f7);
+  transition: all .218s ease 0s;
+}
+input.log_but:hover {
+  color: rgb(24,24,24);
+  /*border: 1px solid rgb(50,50,50);*/
+  background:  linear-gradient(#dcdcdc, #dcdcdc);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	cursor: pointer;
+}
+input.log_but:active {
+  color: rgb(51,51,51);
+  border: 1px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+
 /* Простой «резиновый» носитель
    Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
    http://www.alistapart.com/articles/fluid-images/
@@ -151,6 +185,8 @@ img, object, embed, video {
 	width: 100%;
 	display: block;
 }
+/*	id	*/
+
 #login_fields {
 	clear: none;
 	float: left;
@@ -160,7 +196,10 @@ img, object, embed, video {
 }
 }
 
-/*	id	*/
+#login_form {
+	animation-delay: 1s;
+	animation-duration: 3s;
+}
 
 #login_image {
 	width: 35%;
@@ -171,13 +210,16 @@ img, object, embed, video {
 .log_form {
 	display: block;
 	width: 20%;
-	left: 43%;
-	right: 37%;
 	position: absolute;
+	top: 25%;
+	left: 58%;
+	font-size: 1.1em;
+	color: grey;
 }
 .log_im {
+	position: absolute;
 	display: block;
 	width: 46%;
-	margin-top: 10%;
-	margin-left: 28%;
+	top: 25%;
+	left: 20%;
 }

@@ -44,7 +44,7 @@ img {
  * 3. Предотвращение изменение размера текста iOS при изменении ориентации устройства без отключения пользовательского масштаба: h5bp.com/g
  */
 
-html { font-size: 100%; overflow: auto; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { font-size: 100%; overflow: hidden; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body {
 	margin: 0;
@@ -98,9 +98,9 @@ div {
 	margin-left: auto;
 	margin-right: auto;
 	width: 89.28%;
+	height: 90%;
 	padding-left: 1.86%;
 	padding-right: 1.86%;
-	height: 90%;
 }
 #LayoutDiv1 {
 	clear: both;
@@ -110,20 +110,6 @@ div {
 	display: block;
 }
 #line {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-}
-#space2 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-}
-#space1 {
 	clear: both;
 	float: left;
 	margin-left: 0;
@@ -135,9 +121,9 @@ div {
 
 @media only screen and (min-width: 481px) {
 .gridContainer {
-	width: 94.575%;
 	padding-left: 1.2125%;
 	padding-right: 1.2125%;
+	width: 94.575%;
 }
 #LayoutDiv1 {
 	clear: both;
@@ -152,21 +138,7 @@ div {
 	margin-left: 0;
 	width: 100%;
 	display: block;
-}
-#space2 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-}
-#space1 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-}
+	}
 }
 
 /* Макет для настольного компьютера: 769–1232 пикс. (максимум). Наследует стили от мобильного макета и макета для планшета. */
@@ -192,21 +164,7 @@ div {
 	width: 97%;
 	display: block;
 }
-#space2 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-}
-#space1 {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: inline;
-	visibility: hidden;
-}
+
 time_upt_tint {
 	color: #999;
 }
@@ -218,11 +176,16 @@ content_text {
 
 /*	class	*/
 
+.cam_window {
+	position: absolute;
+	width: 99%;
+	height: 100%;
+}
 .g-recaptcha {
 
 }
 }.offline_stat {
-	color: #FF6384;
+	color: red;
 }
 .footer {
 	display: block;
@@ -237,6 +200,7 @@ content_text {
 	margin-bottom: 0.5em;
 	clear: both;
 	float: none;
+	margin-top: 1em;
 }
 .time_upt_tint {
 	color: #FFF;
@@ -246,19 +210,13 @@ content_text {
 	-o-transition: all;
 	transition: all;
 }
-.sys_status {
-	margin-top: 2em;
-	margin-right: 1em;
-	margin-left: 4em;
-	display: inline-block;
-	width: 25%;
-	border: 1.5px solid #000;
-}
 .red_but {
 	cursor: pointer;
+	width: 9.1%;
 }
 .out_but {
 	cursor: pointer;
+	width: 9.4%;
 }
 .motion_log {
 	font-size: 10px;
@@ -286,5 +244,5 @@ content_text {
 	color: #FF0;
 }
 .active_stat {
-	color: #5ED27D;
+	color: green;
 }

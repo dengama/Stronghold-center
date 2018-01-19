@@ -30,11 +30,7 @@
 	overflow: hidden;
 	margin: auto;
 	clear: none;
-	width: 97%;
-	padding-top: 0.5em;
-	padding-right: 0em;
-	padding-bottom: 0em;
-	padding-left: 0em;
+	width: 100%;
 }
 
 /* This is the selector for the TabGroup. The TabGroup container houses
@@ -69,7 +65,7 @@
  */
 .TabbedPanelsTab {
 	position: relative;
-	top: 1px;
+	top: 0px;
 	float: left;
 	padding: 4px 10px;
 	margin: 0px 1px 0px 0px;
@@ -149,8 +145,9 @@
  * want to style the Content container.
  */
 .TabbedPanelsContent {
-	overflow: hidden;
-	padding: 4px;
+	position: absolute;
+	height: 100%;
+	overflow: auto;
 }
 
 /* This selector is an example of how to change the appearnce of the currently
@@ -159,11 +156,11 @@
  * is activated/deactivated.
  */
 .TabbedPanelsContentVisible {
+	height: 90%;
 	background-color: #191919;
 	font-size: 1.7em;
-	vertical-align: middle;
-	position: relative;
-	padding-top: 1.5em;
+	position: absolute;
+	width: 100%;
 
 }
 

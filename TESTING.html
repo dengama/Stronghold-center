@@ -4,15 +4,70 @@
 <!doctype html>
 <head>
 <script src="Chart.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<?
-	$cpu_upd = round(exec('ps aux | awk \'{s += $3} END {print s ""}\''));		//cpu %
-	$mem_upd = round(exec('ps aux | awk \'{s += $4} END {print s ""}\''));		//mem %
-	
-	$db = new mysql(); //~ Создаем новый объект класса
-		$db->query2("UPDATE `statistics` SET `usage`= $cpu_upd WHERE id=1;");
-		$db->query2("UPDATE `statistics` SET `usage`= $mem_upd WHERE id=1;");
-?>
+
+<div class="wrapper">
+	 <form action="javascript:void(null);" onsubmit="authAjax()" method="post">
+			 <input id="login" name="login" placeholder="Введите логин">
+			 <input id="password" type="password" name="password" placeholder="Введите пароль">
+			 <input id="submit" type="submit" value="Вход">
+	 </form>
+</div>
+
+	<script>
+	    function authAjax() {
+
+	        //Инициализируем переменные для удобного доступа к input полям
+	        var login = $("#login");
+	        var pass = $("#password");
+
+	        //Инициализируем новые переменные и выдергиваем введеные данные в input поля
+	        var val1 = login.val();
+	        var val2 = pass.val();
+
+	        //Если данные пустые, то добавляем класс error
+	        //Кликнув по input полю, класс error удаляется
+	        //Если данные не пустые, то удаляем класс error
+	        if (val1 === "") {
+	            login.addClass("error");
+	            login.click(function () {
+	                login.removeClass("error");
+	            });
+	        } else {
+	            login.removeClass("error");
+	        }
+
+	        //Если данные пустые, то добавляем класс error
+	        //Кликнув по input полю, класс error удаляется
+	        //Если данные не пустые, то удаляем класс error
+	        if (val2 === "") {
+	            pass.addClass("error");
+	            pass.click(function () {
+	                pass.removeClass("error");
+	            });
+	        } else {
+	            pass.removeClass("error");
+	        }
+
+
+	        //Если данные в двух input полях не пустые, то делаем ajax запрос
+	        if (val1 !== "" && val2 !== "") {
+	            $.ajax({
+	                url: 'test.php',
+	                data: 'login=' + val1 + '&password=' + val2,
+	                type: 'POST',
+	                success: function(data){
+	                    alert(data + ', Добро пожаловать!');
+	                },
+	                error: function () {
+	                    alert('ошибка');
+	                }
+	            });
+	        }
+
+	    }
+	</script>
 </body>
 </html>
